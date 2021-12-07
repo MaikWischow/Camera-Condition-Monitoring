@@ -1,6 +1,6 @@
 
 # Noise
-This directory contains the source code for [noise estimation](./estimation) and [noise simulation](./simluation).
+This directory contains the source code for [noise estimation](./estimation) and [noise simulation](./simulation).
 To install the necessary python requirements run:
 ```
 pip install -r requirements.txt
