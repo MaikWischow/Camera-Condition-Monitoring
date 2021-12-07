@@ -1,5 +1,5 @@
 # Blur
-This directory contains the source code for [blur estimation](./estimation) and [blur simulation](./simluation).
+This directory contains the source code for [blur estimation](./estimation) and [blur simulation](./simulation).
 To install the necessary python requirements run:
 ```
 pip install -r requirements.txt
