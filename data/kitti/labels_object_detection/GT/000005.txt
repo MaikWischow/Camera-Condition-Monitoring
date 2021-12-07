@@ -1,0 +1,5 @@
+Pedestrian 330 179 361 239
+DontCare 607 171 622 185
+DontCare 607 172 622 185
+DontCare 607 172 622 185
+DontCare 567 169 586 185

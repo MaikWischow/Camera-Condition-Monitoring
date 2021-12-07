@@ -1,0 +1,7 @@
+numpy==1.18.5
+opencv-python==4.5.1.48
+pillow==8.1.2
+sklearn==0.16.1
+scipy==1.4.1
+tensorflow-gpu==2.3.0
+cudatoolkit==10.2.89
