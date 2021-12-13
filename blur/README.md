@@ -29,7 +29,7 @@ matlab -r estimation/PMP/main -logfile estimation/PMP/logfile
 
 ## Citations
 CNN:
-```
+```bibtex
 @inproceedings{bauer2028automatic,
   title={Automatic estimation of modulation transfer functions},
   author={Bauer, Matthias and Volchkov, Valentin and Hirsch, Michael and Schc{\"o}lkopf, Bernhard},
@@ -39,7 +39,7 @@ CNN:
 ```
 
 GBA:
-```
+```bibtex
 @article{bai2018graph,
   title={Graph-based blind image deblurring from a single photograph},
   author={Bai, Yuanchao and Cheung, Gene and Liu, Xianming and Gao, Wen},
@@ -63,7 +63,7 @@ GBA:
 ```
 
 PMP:
-```
+```bibtex
 @article{wen2020simple,
   title={A simple local minimal intensity prior and an improved algorithm for blind image deblurring},
   author={Wen, Fei and Ying, Rendong and Liu, Yipeng and Liu, Peilin and Truong, Trieu-Kien},
