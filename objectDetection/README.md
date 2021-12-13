@@ -29,7 +29,7 @@ python evaluation/mapEvaluation.py
 ## Citations
 
 YOLOv4:
-```
+```bibtex
 @article{bochkovskiy2020yolov4,
   title={Yolov4: Optimal speed and accuracy of object detection},
   author={Bochkovskiy, Alexey and Wang, Chien-Yao and Liao, Hong-Yuan Mark},
@@ -49,8 +49,7 @@ YOLOv4:
 ```
 
 Faster R-CNN:
-```
-
+```bibtex
 @article{ren2016faster,
   title={Faster R-CNN: towards real-time object detection with region proposal networks},
   author={Ren, Shaoqing and He, Kaiming and Girshick, Ross and Sun, Jian},
@@ -74,7 +73,7 @@ Faster R-CNN:
 ```
 
 mAP Evaluation:
-```
+```bibtex
 @misc{githubMotionBlurKernelCode,
   author = {Cartucho},
   title = {mAP (mean Average Precision)},
