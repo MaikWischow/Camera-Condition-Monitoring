@@ -30,7 +30,7 @@ python estimation/PCA/analyticNoiseEstimation_PCA.py
 
 ## Citations
 CNN:
-```
+```bibtex
 @article{tan2019pixelwise,
   title={Pixelwise estimation of signal-dependent image noise using deep residual learning},
   author={Tan, Hanlin and Xiao, Huaxin and Lai, Shiming and Liu, Yu and Zhang, Maojun},
@@ -52,7 +52,7 @@ CNN:
 ```
 
 B+F:
-```
+```bibtex
 @article{shin2005block,
   title={Block-based noise estimation using {A}daptive {G}aussian {F}iltering},
   author={Shin, Dong-Hyuk and Park, Rae-Hong and Yang, Seungjoon and Jung, Jae-Han},
@@ -65,7 +65,7 @@ B+F:
 ```
 
 PCA:
-```
+```bibtex
 @InProceedings{Chen15iccv,
   author={Chen, Guangyong and Zhu, Fengyuan and Heng, Pheng Ann},
   booktitle=iccv, 
@@ -87,7 +87,7 @@ PCA:
 ```
 
 Waterloo dataset:
-```
+```bibtex
 @article{ma2017waterloo,
 	author    = {Ma, Kede and Duanmu, Zhengfang and Wu, Qingbo and Wang, Zhou and Yong, Hongwei and Li, Hongliang and Zhang, Lei}, 
 	title     = {{Waterloo Exploration Database}: New Challenges for Image Quality Assessment Models}, 
