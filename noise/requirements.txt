@@ -2,6 +2,12 @@ h5py==2.10.0
 numpy==1.18.5
 opencv==3.3.1
 tqdm==4.47.0
-tensorflow-gpu==1.15.0
-cudatoolkit==10.0.130
 scipy==1.5.0
+
+## Additional dependencies for CNN noise estimation TFv1
+#tensorflow-gpu==1.15.0
+#cudatoolkit==10.0.130
+
+## Additional dependencies for CNN noise estimation TFv2
+#tensorflow-gpu==2.3.0
+#cudatoolkit==10.2.89

@@ -12,9 +12,12 @@ We compared three methods for noise estimation in our experiments: [CNN](./estim
 ### CNN
 Customize and run:
 ```
-python estimation/CNN/main.py
+python estimation/CNN/TFv2/main.py
 ```
 We used the [original training images](https://ece.uwaterloo.ca/~k29ma/exploration/) from the Waterloo dataset to train the CNN.
+We suggest to use the upgraded CNN noise estimator for tensorflow version 2 (TFv2).
+To recreate the paper's experiments, please use the estimator written for tensorflow version 1 (TFv1).
+Please note that the CNN of TFv2 is retrained because we did not manage to transfer the weights, i.e., the TFv1 and TFv2 CNNs do not have the same weights.
 
 ### B+F
 Customize and run:

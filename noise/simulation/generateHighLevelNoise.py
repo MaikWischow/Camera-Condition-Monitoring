@@ -151,7 +151,7 @@ def applyHighLevelNoise(imgIn, noiseLevel, paramsIn={}, debug=True):
     if(params["applyDarkCurrent"]):
         eGap = siEGap0 - ((siAlpha * np.power(temperature, 2.0)) / (temperature + siBeta));
         dsTemp = np.power(temperature, 1.5) * np.exp(-1.0 * eGap / (2.0 * boltzmannConstEV * temperature));
-        darkSignal =  2.55 * 1e15 * params["exposureTime"] * np.power(params["sensorPixelSize"] / 10.0, 2.0) * params["darkSignalFoM"] * dsTemp;
+        darkSignal =  2.5 * 1e15 * params["exposureTime"] * np.power(params["sensorPixelSize"] / 10.0, 2.0) * params["darkSignalFoM"] * dsTemp;
         darkSignalWithDarkNoise = sampleRandPoisson(darkSignal);
         if params["darksignalCorrection"]:
             darkSignalWithDarkNoise -= darkSignal
@@ -259,7 +259,6 @@ def applyPhotonNoise(img, noiseLevel):
     
     img, noiseMap = applyHighLevelNoise(img, noiseLevel, paramsIn, debug=False)
     img = img.astype("uint8")
-    img = img[..., 0]
     return img, noiseMap
 
 def applyDarkCurrentShotNoise(img, noiseLevel):
@@ -284,7 +283,6 @@ def applyDarkCurrentShotNoise(img, noiseLevel):
     
     img, noise = applyHighLevelNoise(img, noiseLevel, paramsIn, debug=False)
     img = img.astype("uint8")
-    img = img[..., 0]
     return img, noise
 
 def applyReadNoise(img, noiseLevel):
@@ -308,7 +306,6 @@ def applyReadNoise(img, noiseLevel):
     
     img, noise = applyHighLevelNoise(img, noiseLevel, paramsIn, debug=False)
     img = img.astype("uint8")
-    img = img[..., 0]
     return img, noise
 
 def applyPhotonDarkReadNoise(img, noiseLevel):
@@ -333,7 +330,6 @@ def applyPhotonDarkReadNoise(img, noiseLevel):
     
     img, noise = applyHighLevelNoise(img, noiseLevel, paramsIn, debug=False)
     img = img.astype("uint8")
-    img = img[..., 0]
     return img, noise
 
 def applyDarkReadNoise(img, noiseLevel):
@@ -358,7 +354,6 @@ def applyDarkReadNoise(img, noiseLevel):
     
     img, noise = applyHighLevelNoise(img, noiseLevel, paramsIn, debug=False)
     img = img.astype("uint8")
-    img = img[..., 0]
     return img, noise
 
 
@@ -379,4 +374,4 @@ def applyDarkReadNoise(img, noiseLevel):
 #         img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 #         img, _ = applyPhotonNoise(img, noiseLevel)
 #         imgName = imgPath.split(os.sep)[-1].split(".")[0]
-#         cv2.imwrite(os.path.join(subDirOut, imgName + imgFileEnding), img)    
+#         cv2.imwrite(os.path.join(subDirOut, imgName + imgFileEnding), img)      
