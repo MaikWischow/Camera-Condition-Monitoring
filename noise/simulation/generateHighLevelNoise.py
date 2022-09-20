@@ -251,11 +251,11 @@ def applyPhotonNoise(img, noiseLevel):
     
     # Init parameters
     paramsIn = {}
-    params["applyPhotonNoise"] = True
-    params["applyDarkCurrent"] = False
-    params["darksignalCorrection"] = False
-    params["applySourceFollwerNoise"] = False
-    params["applyKtcNoise"] = False
+    paramsIn["applyPhotonNoise"] = True
+    paramsIn["applyDarkCurrent"] = False
+    paramsIn["darksignalCorrection"] = False
+    paramsIn["applySourceFollwerNoise"] = False
+    paramsIn["applyKtcNoise"] = False
     
     img, noiseMap = applyHighLevelNoise(img, noiseLevel, paramsIn, debug=False)
     img = img.astype("uint8")
