@@ -1,3 +1,5 @@
+# Contact: Maik Wischow (maik.wischow@dlr.de), German Aerospace Center, Rutherfordstrasse 2, 12489 Berlin, Germany.
+
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 from numpy.random import uniform, triangular, beta

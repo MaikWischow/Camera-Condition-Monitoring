@@ -1,8 +1,12 @@
+# Contact: Maik Wischow (maik.wischow@dlr.de), German Aerospace Center, Rutherfordstrasse 2, 12489 Berlin, Germany.
+
 import numpy as np
 import cv2
 import sys
 import os
 import glob
+
+MAX_IMG_INTENSITY = 255.0
 
 def im2patch(im, pch_size, stride=1):
     '''
@@ -91,7 +95,7 @@ def run(imgPath, patchSize, internalNumPatches, dirOut, saveResults=True):
     img = np.array(cv2.imread(imgPath))
     try:
         img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-        img = img / 255.0
+        img = img / MAX_IMG_INTENSITY
         
         h, w = img.shape
         psize = min(min(patchSize, h), w)
@@ -119,7 +123,7 @@ def run(imgPath, patchSize, internalNumPatches, dirOut, saveResults=True):
     
                 tileM = img[start_y:end_y, start_x:end_x]
                 h_, w_ = tileM.shape
-                sigma = noise_estimate(tileM, internalNumPatches) * 255.0
+                sigma = noise_estimate(tileM, internalNumPatches) * MAX_IMG_INTENSITY
                 estimatedNoiseMap[start_y :start_y + h_, start_x : start_x + w_] = sigma   
                 
         if saveResults:

@@ -1,3 +1,5 @@
+# Contact: Maik Wischow (maik.wischow@dlr.de), German Aerospace Center, Rutherfordstrasse 2, 12489 Berlin, Germany.
+
 import cv2
 import numpy as np
 import os

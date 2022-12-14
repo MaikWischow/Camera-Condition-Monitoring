@@ -1,3 +1,5 @@
+# Contact: Maik Wischow (maik.wischow@dlr.de), German Aerospace Center, Rutherfordstrasse 2, 12489 Berlin, Germany.
+
 import numpy as np
 import os
 import math
@@ -290,10 +292,10 @@ def train(model, trainDataSetPath, checkpointSaveDir):
 #         train(M, trainDataSetPath, checkPointSaveDir)
        
 #     # Test the model
-#     if False:
+#     if True:
 #         imgDirIn = r"../../../data/udacity/img/GT"
 #         dirOut = r"../../../data/udacity/labels_blur_patchwise/CNN"
 #         imgFileEnding = ".jpg"
 #         imgPathBatch = glob.glob(os.path.join(imgDirIn, "*" + imgFileEnding))
 #         M = prepareModel()
-#         estimateMTF(M, imgPathBatch, dirOut)
+#         estimateMTF(M, imgPathBatch, None)

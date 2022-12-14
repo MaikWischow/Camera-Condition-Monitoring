@@ -1,3 +1,5 @@
+# Contact: Maik Wischow (maik.wischow@dlr.de), German Aerospace Center, Rutherfordstrasse 2, 12489 Berlin, Germany.
+
 import sys
 import glob
 import os

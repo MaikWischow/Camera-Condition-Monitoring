@@ -1,9 +1,9 @@
-import cv2
+# Contact: Maik Wischow (maik.wischow@dlr.de), German Aerospace Center, Rutherfordstrasse 2, 12489 Berlin, Germany.
+
 import math
 import os
 import numpy as np
 import random
-import glob
 
 # Configure the default parameters.
 ##################### Configuration ############################
@@ -24,8 +24,8 @@ params["sensorPixelSize"] =  0.005 # in mm^2
 params["INPUT_IMG_BIT_DEPTH"] = 8.0
 params["OUTPUT_IMG_BIT_DEPTH"] = 8.0
 params["sensorType"] = 'ccd'
-NmaxIn = np.power(2.0, params["INPUT_IMG_BIT_DEPTH"])
-NmaxOut = np.power(2.0, params["OUTPUT_IMG_BIT_DEPTH"])
+NmaxIn = np.power(2.0, params["INPUT_IMG_BIT_DEPTH"]) - 1.0
+NmaxOut = np.power(2.0, params["OUTPUT_IMG_BIT_DEPTH"]) - 1.0
 
 # Photons to electrons
 params["fullWellSize"] = 20000.0 # in e-
@@ -200,21 +200,14 @@ def applyHighLevelNoise(imgIn, noiseLevel, paramsIn={}, debug=True):
     adGain = NmaxOut /(Vmax - Vmin)
     dn = adGain * (chargeNodeRefVoltMat - voltage)
     
-    # Get simulated noise
-    imgIn = imgIn * (NmaxOut - 1.0)
-    noiseMap = dn - imgIn
-    
-    # Amplify noise to reach the desired noise level
-    rawNoiseLevel = np.mean(np.abs(noiseMap))
-    if debug:
-        print("Raw Noise Level:", rawNoiseLevel)
-    noiseAmpFactor = noiseLevel / rawNoiseLevel
-    noiseMap = noiseAmpFactor * noiseMap
-    
-    # Add final noise to input image
+    # Get simulated noise     
+    imgIn = imgIn * NmaxOut
+    noiseMap = dn.astype("float32") - imgIn.astype("float32")
+    noiseAmpFactor = noiseLevel / np.std(noiseMap)
+    noiseMap = noiseMap * noiseAmpFactor
     dn = imgIn + noiseMap
-    dn = np.round(dn)
-    dn = np.clip(dn, 0.0, NmaxOut - 1.0)
+    dn = np.clip(dn, 0.0, NmaxOut)
+    noiseMap = dn.astype("float32") - imgIn.astype("float32")
     
     return dn, noiseMap
  
@@ -236,7 +229,7 @@ def prepareImage(img):
     
     img = img.astype("float32") 
     if np.max(img) > 1.0:
-        img = img / (NmaxIn - 1.0)
+        img = img / (NmaxIn)
     
     return img
 
@@ -359,6 +352,9 @@ def applyDarkReadNoise(img, noiseLevel):
 
 # Example for photon noise with noise level 25.
 # if __name__ == "__main__":  
+#     import cv2
+#     import glob
+
 #     dirIn = r"..\..\data\udacity\img\GT"
 #     dirOut = r"..\..\data\udacity\img\noised"
 #     imgFileEnding = ".jpg"
@@ -370,7 +366,7 @@ def applyDarkReadNoise(img, noiseLevel):
 
 #     imgPaths = glob.glob(os.path.join(dirIn, "*" + imgFileEnding))
 #     for imgPath in imgPaths:
-#         img = cv2.imread(imgPath).astype("float32") / (NmaxIn - 1.0)
+#         img = cv2.imread(imgPath).astype("float32") / (NmaxIn)
 #         img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 #         img, _ = applyPhotonNoise(img, noiseLevel)
 #         imgName = imgPath.split(os.sep)[-1].split(".")[0]

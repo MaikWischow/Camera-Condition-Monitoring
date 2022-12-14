@@ -1,3 +1,5 @@
+# Contact: Maik Wischow (maik.wischow@dlr.de), German Aerospace Center, Rutherfordstrasse 2, 12489 Berlin, Germany.
+
 import numpy as np
 from scipy.signal import convolve
 import cv2

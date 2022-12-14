@@ -1,3 +1,5 @@
+# Contact: Maik Wischow (maik.wischow@dlr.de), German Aerospace Center, Rutherfordstrasse 2, 12489 Berlin, Germany.
+
 import cv2
 import os
 import numpy as np
@@ -154,7 +156,7 @@ def run(imgPath, dirOut, patchSize=128, saveResults=False):
     except:
         return None
 
-# Example
+## Example
 # if __name__ == '__main__':
 #     dirIn = r"../../../data/udacity/img/GT"
 #     dirOut = r"../../../data/udacity/labels_noise_patchwise/B+F"
