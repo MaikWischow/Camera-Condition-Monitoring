@@ -1,7 +1,7 @@
 # Camera Condition Monitoring and Readjustment by means of Noise and Blur
 
 This repository contains the source code of the paper:
-Wischow, M., Gallego, G., Ernst, I., Börner, A., (2021). **[Camera Condition Monitoring and Readjustment by means of Noise and Blur](https://arxiv.org/abs/2112.05456)**.
+Wischow, M., Gallego, G., Ernst, I., Börner, A., (2022). **[Camera Condition Monitoring and Readjustment by means of Noise and Blur](https://arxiv.org/abs/2112.05456)**.
 
 We propose a modular and general self-health-maintenance framework that strives for optimal application performance. 
 We demonstrate the working principle of the framework on the exemplary application of object detection, and focus on motion blur and noise as typical undesired disturbances (see Fig. 1).
