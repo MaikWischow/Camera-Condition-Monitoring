@@ -6,7 +6,7 @@ Wischow, M., Gallego, G., Ernst, I., Börner, A., (2021). **[Camera Condition Mo
 We propose a modular and general self-health-maintenance framework that strives for optimal application performance. 
 We demonstrate the working principle of the framework on the exemplary application of object detection, and focus on motion blur and noise as typical undesired disturbances (see Fig. 1).
 
-![Wischow_fig1](https://user-images.githubusercontent.com/8024432/145776000-333fbc74-f838-4a44-a8c8-62267833dcfd.png)
+![Wischow_fig1](![image](https://user-images.githubusercontent.com/93527304/207606237-2ed213b7-7aab-4958-9e10-06eb6cd14797.png))
 
 ## General information
 - Each sub-directory contains its own readMe file with instructions.
