@@ -1,7 +1,7 @@
-# Camera Condition Monitoring and Readjustment by means of Noise and Blur
+# Monitoring and Adapting the Physical State of a Camera for Autonomous Vehicles
 
 This repository contains the source code of the paper:
-Wischow, M., Gallego, G., Ernst, I., Börner, A., (2022). **[Camera Condition Monitoring and Readjustment by means of Noise and Blur](https://arxiv.org/abs/2112.05456)**.
+Wischow, M., Gallego, G., Ernst, I., Börner, A., (2023). Monitoring and Adapting the Physical State of a Camera for Autonomous Vehicles.
 
 We propose a modular and general self-health-maintenance framework that strives for optimal application performance. 
 We demonstrate the working principle of the framework on the exemplary application of object detection, and focus on motion blur and noise as typical undesired disturbances (see Fig. 1).
@@ -14,13 +14,4 @@ We demonstrate the working principle of the framework on the exemplary applicati
 - All python package requirements are specified in the tested versions.
 
 ## Citation
-```bibtex
-@misc{wischow2021camera,
-      title={Camera Condition Monitoring and Readjustment by means of Noise and Blur}, 
-      author={Maik Wischow and Guillermo Gallego and Ines Ernst and Anko Börner},
-      year={2021},
-      eprint={2112.05456},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
-```
+To be announced.
