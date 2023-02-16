@@ -14,4 +14,13 @@ We demonstrate the working principle of the framework on the exemplary applicati
 - All python package requirements are specified in the tested versions.
 
 ## Citation
-To be announced.
+```
+@misc{wischow2023monitoring,
+  doi = {10.48550/ARXIV.2112.05456},
+  url = {https://arxiv.org/abs/2112.05456},
+  author = {Wischow, Maik and Gallego, Guillermo and Ernst, Ines and Börner, Anko},
+  title = {Monitoring and Adapting the Physical State of a Camera for Autonomous Vehicles},
+  publisher = {arXiv},
+  year = {2023}
+}
+```
