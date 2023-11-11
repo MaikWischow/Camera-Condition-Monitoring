@@ -1,7 +1,8 @@
-# Monitoring and Adapting the Physical State of a Camera for Autonomous Vehicles
+# Monitoring and Adapting the Physical State of a Camera for Autonomous Vehicles (IEEE T-ITS, 2023)
 
-This repository contains the source code of the paper:
-Wischow, M., Gallego, G., Ernst, I., Börner, A., (2023). Monitoring and Adapting the Physical State of a Camera for Autonomous Vehicles.
+This repository contains the source code of the paper **[Monitoring and Adapting the Physical State of a Camera for Autonomous Vehicles](https://doi.org/10.1109/TITS.2023.3328811) (IEEE T-ITS, 2023)**,  by [Maik Wischow](https://www.researchgate.net/profile/Maik-Wischow), [Guillermo Gallego](https://sites.google.com/view/guillermogallego), [Ines Ernst](https://www.researchgate.net/profile/Ines-Ernst) and [Anko Börner](https://www.researchgate.net/profile/Anko-Boerner). 
+
+A postprint PDF of the paper, including supplementary material, [is available on arXiv](https://arxiv.org/pdf/2112.05456).
 
 We propose a modular and general self-health-maintenance framework that strives for optimal application performance. 
 We demonstrate the working principle of the framework on the exemplary application of object detection, and focus on motion blur and noise as typical undesired disturbances (see Fig. 1).
@@ -14,13 +15,14 @@ We demonstrate the working principle of the framework on the exemplary applicati
 - All python package requirements are specified in the tested versions.
 
 ## Citation
-```
-@misc{wischow2023monitoring,
-  doi = {10.48550/ARXIV.2112.05456},
-  url = {https://arxiv.org/abs/2112.05456},
+```bibtex
+@article{wischow2023monitoring,
   author = {Wischow, Maik and Gallego, Guillermo and Ernst, Ines and Börner, Anko},
   title = {Monitoring and Adapting the Physical State of a Camera for Autonomous Vehicles},
-  publisher = {arXiv},
-  year = {2023}
+  journal = {IEEE Transactions on Intelligent Transportation Systems (T-ITS)},
+  year = {2023},
+  volume = {},
+  number = {},
+  pages = {1-14},
+  doi = {10.1109/TITS.2023.3328811}
 }
-```
